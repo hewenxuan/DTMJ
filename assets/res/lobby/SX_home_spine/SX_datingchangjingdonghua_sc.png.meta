@@ -1,0 +1,30 @@
+{
+  "ver": "1.0.0",
+  "uuid": "2cd465a5-31b2-44f9-9be6-482744180336",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "subMetas": {
+    "SX_datingchangjingdonghua_sc": {
+      "ver": "1.0.3",
+      "uuid": "0ba72ee9-7892-4a7e-a342-018650afcfc8",
+      "rawTextureUuid": "2cd465a5-31b2-44f9-9be6-482744180336",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 3.5,
+      "offsetY": -2,
+      "trimX": 9,
+      "trimY": 6,
+      "width": 296,
+      "height": 299,
+      "rawWidth": 307,
+      "rawHeight": 307,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

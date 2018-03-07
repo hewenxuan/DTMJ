@@ -1,0 +1,30 @@
+{
+  "ver": "1.0.0",
+  "uuid": "6b72055b-4c88-43bf-8bd4-c3ab3972b80a",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "subMetas": {
+    "dt_login_banhao2": {
+      "ver": "1.0.3",
+      "uuid": "7c182f98-f842-473c-8c17-314a76c9cc5f",
+      "rawTextureUuid": "6b72055b-4c88-43bf-8bd4-c3ab3972b80a",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 227,
+      "trimY": 2,
+      "width": 826,
+      "height": 16,
+      "rawWidth": 1280,
+      "rawHeight": 20,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "ver": "1.0.0",
+  "uuid": "a8740349-08db-4090-b5f7-71238ea425a2",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "subMetas": {
+    "dt_play_daojishi_jiantou": {
+      "ver": "1.0.3",
+      "uuid": "fbcd7cfe-416e-4678-8365-308add3ce272",
+      "rawTextureUuid": "a8740349-08db-4090-b5f7-71238ea425a2",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": -19.5,
+      "offsetY": -0.5,
+      "trimX": 2,
+      "trimY": 1,
+      "width": 42,
+      "height": 45,
+      "rawWidth": 85,
+      "rawHeight": 46,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

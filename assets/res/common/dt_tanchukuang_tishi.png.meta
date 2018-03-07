@@ -1,0 +1,30 @@
+{
+  "ver": "1.0.0",
+  "uuid": "9b3b6cda-870e-42a9-b1e3-f8587875dd22",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "subMetas": {
+    "dt_tanchukuang_tishi": {
+      "ver": "1.0.3",
+      "uuid": "07446aca-31c1-425f-82c0-93261d4df048",
+      "rawTextureUuid": "9b3b6cda-870e-42a9-b1e3-f8587875dd22",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0.5,
+      "offsetY": 0,
+      "trimX": 43,
+      "trimY": 1,
+      "width": 101,
+      "height": 36,
+      "rawWidth": 186,
+      "rawHeight": 38,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

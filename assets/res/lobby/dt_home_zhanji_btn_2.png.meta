@@ -1,0 +1,30 @@
+{
+  "ver": "1.0.0",
+  "uuid": "f569f703-d466-4a50-8fe7-a4b65181dc99",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "subMetas": {
+    "dt_home_zhanji_btn_2": {
+      "ver": "1.0.3",
+      "uuid": "94d333a0-9e6c-4f23-81c8-85899c640104",
+      "rawTextureUuid": "f569f703-d466-4a50-8fe7-a4b65181dc99",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 3,
+      "trimY": 4,
+      "width": 114,
+      "height": 52,
+      "rawWidth": 120,
+      "rawHeight": 60,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

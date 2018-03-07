@@ -1,0 +1,30 @@
+{
+  "ver": "1.0.0",
+  "uuid": "09226841-4576-4dcf-a685-182667e263bd",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "subMetas": {
+    "dt_play_daojishi_yuan": {
+      "ver": "1.0.3",
+      "uuid": "228dc13c-92bd-4805-b822-910b82ac4b22",
+      "rawTextureUuid": "09226841-4576-4dcf-a685-182667e263bd",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 102,
+      "height": 102,
+      "rawWidth": 102,
+      "rawHeight": 102,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

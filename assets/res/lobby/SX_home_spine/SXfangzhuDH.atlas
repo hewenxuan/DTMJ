@@ -1,0 +1,20 @@
+
+SXfangzhuDH.png
+size: 122,122
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+image/fangzhu
+  rotate: false
+  xy: 2, 28
+  size: 98, 92
+  orig: 98, 92
+  offset: 0, 0
+  index: -1
+image/yun
+  rotate: false
+  xy: 2, 2
+  size: 87, 24
+  orig: 87, 24
+  offset: 0, 0
+  index: -1
