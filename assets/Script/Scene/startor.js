@@ -12,38 +12,57 @@ cc.Class({
     extends: cc.Component,
 
     properties: {
-        version: "1.0.0",
-        game: "mahjong",
-        publisher: "develop",
-        channel: "element",
-        resource: "1.0.0",
-        switchServer: "http://127.0.0.1:9114",
-        gateServer: "http://127.0.0.1:3721"
+       
     },
 
     // LIFE-CYCLE CALLBACKS:
 
     onLoad() {
         console.log("game started!");
-        if (!cc.gameManager) {
-            cc.gameManager = new gameManager({
-                game: this.game,
-                version: this.version,
-                publisher: this.publisher,
-                channel: this.channel,
-                resource: this.resource
-            });
-        }
-        if (!cc.networkManager) {
-            cc.networkManager = new networkManager({
-                switchServer: this.switchServer,
-                gateServer: this.gateServer
-            });
-        }
+        
+        cc.jsInstance = {};
+        var global = require("globalUtils");
+        cc.jsInstance.globalUtils = new global();
+
+        //初始化网络连接器
+        var gamenet = require("gamenet");
+        cc.jsInstance.gamenet = new gamenet();
+        //获取配置
+        var config = require("config");
+        var cfg = new config();
+        cc.jsInstance.remoteCfg = cfg.getConfig();
+
+        this.initEvents()
+
+        this.connectToPomelo()
+       
+
     },
 
     start() {
-        cc.director.loadScene("login");
+        
+    },
+    connectToPomelo(){
+        var servers = cc.jsInstance.remoteCfg.servers.split(',');
+        var server = servers[Math.floor(Math.random() * servers.length)];
+        var parts = server.split(':');
+        var host = parts[0];
+        var port = parseInt(parts[1 + Math.floor(Math.random() * (parts.length - 1))]);
+        cc.jsInstance.gamenet.disconnect();
+        cc.jsInstance.gamenet.connect(host, port, function() {
+            cc.jsInstance.globalUtils.send("connect");
+        }, function() { 
+             cc.jsInstance.globalUtils.send("disconnect", 1);
+        });
+    },
+    
+    initEvents(){
+        cc.jsInstance.globalUtils.dataEventHandler = this.node;
+        this.node.on("connect",function(data){
+            console.log('startor is connect!!!!!');
+            cc.director.loadScene("login");
+        })
+        
     },
 
     // update (dt) {},

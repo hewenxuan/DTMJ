@@ -39,13 +39,8 @@ cc.Class({
     // LIFE-CYCLE CALLBACKS:
 
     onLoad () {
-        if(cc.managers){
-            cc.managers.block = this;
-        }else{
-            cc.managers = {};
-            cc.managers.block = this;
-        }
         
+        cc.jsInstance.block = this;
         this.node.active = false;
     },
 

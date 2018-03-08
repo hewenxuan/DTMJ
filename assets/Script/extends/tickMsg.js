@@ -46,12 +46,7 @@ cc.Class({
     // LIFE-CYCLE CALLBACKS:
 
     onLoad () {
-        if(cc.managers){
-            cc.managers.msgLayer = this;
-        }else{
-            cc.managers = {};
-            cc.managers.msgLayer = this;
-        }
+        cc.jsInstance.msgLayer = this;
         console.log("msglayer is on load!")
         this.node.active = false;
     },

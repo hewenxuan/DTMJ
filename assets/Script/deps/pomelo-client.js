@@ -255,6 +255,7 @@ pomelo.notify = function (route, msg) {
   sendMessage(0, route, msg);
 };
 
+pomelo.off = pomelo.removeAllListeners ;
 var sendMessage = function (reqId, route, msg) {
   if (useCrypto) {
     msg = JSON.stringify(msg);
