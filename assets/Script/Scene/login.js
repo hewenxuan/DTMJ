@@ -165,7 +165,8 @@ cc.Class({
         // },3)
     },
     guestLogin() {
-        var guest = cc.sys.localStorage.getItem('guestData');
+        var userId = cc.jsInstance.globalUtils.getColumn("id")||"";
+        var guest = cc.sys.localStorage.getItem('guestData'+userId);
         if (guest) guest = JSON.parse(guest);
 
         if (!guest) {
@@ -208,7 +209,9 @@ cc.Class({
                 if (rtn.result == ZJHCode.Success) {
 
                     if (code) {
-                        cc.sys.localStorage.setItem("loginData", JSON.stringify(loginData));
+                        var userId = cc.jsInstance.globalUtils.getColumn("id")||"";
+                        console.log("id ========",userId);
+                        cc.sys.localStorage.setItem("loginData"+userId, JSON.stringify(loginData));
                     }
                     console.log("rtn === ", rtn);
                     cc.jsInstance.globalUtils.send("loginOK", rtn);

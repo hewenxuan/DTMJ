@@ -27,22 +27,31 @@ cc.Class({
         //         this._bar = value;
         //     }
         // },
-        dataEventHandler:null
+        dataEventHandler: null
     },
 
     // LIFE-CYCLE CALLBACKS:
 
     // onLoad () {},
 
-    start () {
+    start() {
 
     },
-    send(evt,data){
-        if(this.dataEventHandler){
-            console.log("data ==== ",data);
+    send(evt, data) {
+        if (this.dataEventHandler) {
+            console.log("data ==== ", data);
             this.dataEventHandler.emit(evt, data)
-        } 
-    }
+        }
+    },
+    getColumn(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+        var r = window.location.search.substr(1).match(reg);
+        if (r != null) {
+            return unescape(r[2]);
+        } else {
+            return null;
+        }
+    },
 
     // update (dt) {},
 });

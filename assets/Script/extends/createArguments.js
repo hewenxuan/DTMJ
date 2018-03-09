@@ -40,8 +40,7 @@ cc.Class({
     // LIFE-CYCLE CALLBACKS:
 
     onLoad () {
-        var a = {};
-        console.log("a = ==== ",a);
+       
     },
 
     start () {

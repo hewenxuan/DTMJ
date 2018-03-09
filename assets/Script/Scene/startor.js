@@ -32,7 +32,12 @@ cc.Class({
         var cfg = new config();
         cc.jsInstance.remoteCfg = cfg.getConfig();
 
+        var network = require("netWork");
+        cc.jsInstance.network = new network();
+        cc.jsInstance.gamenet.registerPomeloMsg(cc.jsInstance.network.getMsges())
+
         this.initEvents()
+        
 
         this.connectToPomelo()
        

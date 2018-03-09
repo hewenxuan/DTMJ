@@ -15,18 +15,18 @@ cc.Class({
         weixinBuy: {
             // ATTRIBUTES:
             default: null,        // The default value will be used only when the component attaching
-                                  // to a node for the first time
+            // to a node for the first time
             type: cc.Label, // optional, default is typeof default
             serializable: true,   // optional, default is true
         },
         gongzhonghao: {
             // ATTRIBUTES:
             default: null,        // The default value will be used only when the component attaching
-                                  // to a node for the first time
+            // to a node for the first time
             type: cc.Label, // optional, default is typeof default
             serializable: true,   // optional, default is true
         },
-        
+
         // bar: {
         //     get () {
         //         return this._bar;
@@ -41,11 +41,11 @@ cc.Class({
 
     // onLoad () {},
 
-    start () {
+    start() {
         this.weixinBuy.string = "你好 ！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！";
         this.gongzhonghao.string = "mantou521!!!";
     },
-    close(){
+    close() {
         this.node.active = false;
     }
     // update (dt) {},

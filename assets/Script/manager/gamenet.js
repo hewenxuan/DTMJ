@@ -136,8 +136,17 @@ cc.Class({
 				if (cc.sys.OS_WINDOWS == cc.sys.os) cc.log(evt + "@" + JSON.stringify(data));
 				cb(data);
 			});
+	},
+	registerPomeloMsg(evts){
+		for(let evt in evts){
+			const callback = evts[evt];
+			pomelo.off(evt);
+			pomelo.on(evt, function (data) {
+				if (cc.sys.OS_WINDOWS == cc.sys.os) cc.log(evt + "@" + JSON.stringify(data));
+				evts[evt](evt,data);
+			});
+		}
 	}
-
 
 	// update (dt) {},
 });

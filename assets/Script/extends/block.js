@@ -15,14 +15,14 @@ cc.Class({
         shaizi: {
             // ATTRIBUTES:
             default: null,        // The default value will be used only when the component attaching
-                                  // to a node for the first time
+            // to a node for the first time
             type: cc.Animation, // optional, default is typeof default
             serializable: true,   // optional, default is true
         },
         circle: {
             // ATTRIBUTES:
             default: null,        // The default value will be used only when the component attaching
-                                  // to a node for the first time
+            // to a node for the first time
             type: cc.Animation, // optional, default is typeof default
             serializable: true,   // optional, default is true
         },
@@ -38,24 +38,24 @@ cc.Class({
 
     // LIFE-CYCLE CALLBACKS:
 
-    onLoad () {
-        
+    onLoad() {
+
         cc.jsInstance.block = this;
         this.node.active = false;
     },
 
-    start () {
+    start() {
         console.log("playAnimation");
         this.shaizi.play('blockclip');
         this.circle.play('blockclip2');
     },
-    show(){
+    show() {
         this.node.active = true;
     },
-    hide(){
+    hide() {
         this.node.active = false;
     },
-    isActive(){
+    isActive() {
         return this.node.active;
     }
 
