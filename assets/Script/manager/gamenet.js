@@ -133,9 +133,8 @@ cc.Class({
 		if (cb)
 			pomelo.on(evt, function (data) {
 				if (lastTableCmd == evt) { lastTableCmd = null; ComputePingPong(); }
-				if (cc.sys.OS_WINDOWS == cc.sys.os) cclog(evt + "@" + JSON.stringify(data));
+				if (cc.sys.OS_WINDOWS == cc.sys.os) cc.log(evt + "@" + JSON.stringify(data));
 				cb(data);
-
 			});
 	}
 
