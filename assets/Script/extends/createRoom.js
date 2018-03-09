@@ -42,8 +42,6 @@ cc.Class({
 
     start() {
         this.playTypeCallBack(null, this._playTypeBtn);
-
-        console.log("cc.gameManager.game = ", cc.gameManager);
     },
     playTypeCallBack(target, evtData) {
         for (var i = 0; i < this.playTypes.children.length; i++) {
@@ -61,13 +59,10 @@ cc.Class({
     },
     createRoomBtnCallback() {
         var gameType = this.node.getChildByName(jsBind[this._playTypeBtn]);
-        /// 这里的 game configure 后面修改成 从 开关服务器获取配置
-        /// 使用http访问 根据客户端参数获取不同的配置
-
         var options = {};
         options.gameType = jsBind[this._playTypeBtn];
-        
-        for(var i  = 0;i< gameType.children.length;i++){
+
+        for (var i = 0; i < gameType.children.length; i++) {
 
             var key = gameType.children[i].name;
             var toggle = gameType.children[i].getComponent(cc.Toggle);
@@ -86,9 +81,7 @@ cc.Class({
             }
         }
         console.log("gameConfig == ", options);
-        cc.networkManager.createTable(gameType, options, () => {
-            console.log("create table response");
-        });
+
     },
     close() {
         this.node.active = false;

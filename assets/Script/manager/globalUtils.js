@@ -40,7 +40,7 @@ cc.Class({
     send(evt,data){
         if(this.dataEventHandler){
             console.log("data ==== ",data);
-            this.dataEventHandler.emit(evt,data)
+            this.dataEventHandler.emit(evt, data)
         } 
     }
 

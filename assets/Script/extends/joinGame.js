@@ -15,14 +15,14 @@ cc.Class({
         roomLabel: {
             // ATTRIBUTES:
             default: null,        // The default value will be used only when the component attaching
-                                  // to a node for the first time
+            // to a node for the first time
             type: cc.Label, // optional, default is typeof default
             serializable: true,   // optional, default is true
         },
         labelDefault: {
             // ATTRIBUTES:
             default: null,        // The default value will be used only when the component attaching
-                                  // to a node for the first time
+            // to a node for the first time
             type: cc.Node, // optional, default is typeof default
             serializable: true,   // optional, default is true
         },
@@ -40,39 +40,39 @@ cc.Class({
 
     // onLoad () {},
 
-    start () {
-      
+    start() {
+
     },
-    onEnable(){
+    onEnable() {
         this.roomLabel.string = "";
-        this.labelDefault.active = this.roomLabel.string==""
+        this.labelDefault.active = this.roomLabel.string == ""
     },
-    close(){
+    close() {
         this.node.active = false;
     },
-    numBtnCallBack(target,evtData){
+    numBtnCallBack(target, evtData) {
         console.log("evtData");
         this.changeLabel(evtData);
     },
-    changeLabel(target){
-        if(target == "clear"){
+    changeLabel(target) {
+        if (target == "clear") {
             this.roomLabel.string = "";
         }
-        else if(target == "back"){
-            var str =  this.roomLabel.string;
-            console.log("str = ",str);
-            str = str.slice(0,str.length-1);
-            console.log("str = ",str);
+        else if (target == "back") {
+            var str = this.roomLabel.string;
+            console.log("str = ", str);
+            str = str.slice(0, str.length - 1);
+            console.log("str = ", str);
             this.roomLabel.string = str;
-        }else{
-            this.roomLabel.string = this.roomLabel.string+target;
+        } else {
+            this.roomLabel.string = this.roomLabel.string + target;
         }
-        if(this.roomLabel.string.length>=6){
+        if (this.roomLabel.string.length >= 6) {
             this.joinGame();
         }
-        this.labelDefault.active = this.roomLabel.string==""
+        this.labelDefault.active = this.roomLabel.string == ""
     },
-    joinGame(){
+    joinGame() {
         console.log("joinRoom!!!!!");
     }
 
